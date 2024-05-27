@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pet Adoption Center</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="img/saving-grace-logo1-removebg-preview.png" alt="PetAdoptionCenter">
+    </div>
+    <div class="wrapper">
+        <form action="/signup" method="POST">
+            <h1>Get Started</h1>
+            <div class="register-link">
+                <p>Already have an account? <a href="/login">Log in</a></p>
+            </div>
+            <div class="wrapper-sign">
+                <h2>Register</h2>
+                <div class="wrapper-sign1">
+                    <div class="input-box">
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="phone" name="phone" placeholder="Phone" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="address" name="address" placeholder="Address" 
+                        required>
+                    </div>
+
+                </div>
+                <div class="wrapper-sign2">
+                    <div class="input-box">
+                        <input type="text" id="email" name="email" placeholder="Email" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="re-email" name="re-email" placeholder="Re-enter your email" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" name="password" placeholder="Password" 
+                        required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="re-password" name="re-password" placeholder="Re-enter your password" 
+                        required>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <button type="submit" class="btn">Sign Up</button>
+
+            
+        </form>
+    </div>
+    <script src="./js/signup.js"></script>
+</body>
+</html>

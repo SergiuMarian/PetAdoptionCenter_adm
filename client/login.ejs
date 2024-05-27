@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pet Adoption Center</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="img/saving-grace-logo1-removebg-preview.png" alt="PetAdoptionCenter">
+    </div>
+    <div class="wrapper">  
+        <form action="/login" method="POST">
+            <h1>Get Started</h1>
+            <div class="input-box">
+                <input type="text" id="email" name="email" placeholder="Email" 
+                required>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Password" 
+                required>
+            </div>
+
+            <button type="submit" class="btn">Log in</button>
+            <div class="error-message">
+                <% if (messages.error) { %>
+                    <%= messages.error %>
+                <% } %>
+            </div>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="/signup">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
