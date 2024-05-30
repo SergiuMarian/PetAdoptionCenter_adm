@@ -11,7 +11,7 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
-
+const bodyParser = require('body-parser');
 
 const initializePassport = require('./passport-config')
 const { nextTick } = require('process')
@@ -35,6 +35,7 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use(bodyParser.json());
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
@@ -43,7 +44,6 @@ app.use(methodOverride('_method'))
 // db connection
 let db
 let users
-
 connectToDb((err) => {
     if(!err){
         app.listen(3000, ()=>{
@@ -53,20 +53,88 @@ connectToDb((err) => {
         users = db.collection('User')
         clients = db.collection('Client')
     }
-
 })
 
-
-
-
 //routes 
+
+// Route to handle DELETE requests for deleting pets
+app.delete('/delete/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Correct usage of ObjectId constructor with 'new'
+        const objectId = new ObjectId(id);
+
+        // Delete pet document from MongoDB using the provided ID
+        const result = await db.collection('Pet').deleteOne({ _id: objectId });
+
+        if (result.deletedCount === 1) {
+            res.status(200).send('Pet deleted successfully');
+        } else {
+            res.status(404).send('Pet not found');
+        }
+    } catch (error) {
+        console.error('Error deleting pet:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Route to handle UPDATE requests for editing pets
+app.put('/edit/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, breed, slot, status, medicalProfile } = req.body;
+        const result = await db.collection('Pet').updateOne(
+            { _id: new ObjectId(id) },
+            { $set: { name, breed, slot, status, medicalProfile } }
+        );
+
+        if (result.matchedCount === 1) {
+            res.status(200).json({ success: true });
+        } else {
+            res.status(404).json({ success: false, message: 'Pet not found' });
+        }
+    } catch (error) {
+        console.error('Error editing pet:', error);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+    }
+});
+
+// Route to handle ADD requests for adding pets
+app.post('/addPet', async (req, res) => {
+    try {
+        const { name, breed, slot, status, medicalProfile } = req.body;
+
+        // Assuming you have a MongoDB database setup
+        const result = await db.collection('Pet').insertOne({
+            name,
+            breed,
+            slot,
+            status,
+            medicalProfile
+        });
+
+        // Check if the pet was successfully added
+        console.log(result.insertedId);
+        if (result.insertedId) {
+            res.status(201).json({ success: true, petId: result.insertedId });
+        } else {
+            res.status(500).json({ success: false, message: 'Failed to add pet' });
+        }
+    } catch (error) {
+        console.error('Error adding pet:', error);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+    }
+});
 
 app.get('/',checkAuthenticated, async(req, res) =>{
     let clientName = await clients.findOne({email: req.user.email},'first_name last_name')
     if(clientName){
          clientName = clientName.first_name + ' ' + clientName.last_name 
     }
-    res.render('index.ejs',{name: clientName})
+    const collection = db.collection('Pet')
+    const pets = await collection.find({}).toArray();
+    res.render('index.ejs',{name: clientName, pets})
 })
     
 

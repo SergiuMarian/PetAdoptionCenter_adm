@@ -1,0 +1,175 @@
+[{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed66"
+  },
+  "email": "vlad.nistor@petac.com",
+  "password": "$2a$10$nRZSsSx2IkyB3OQc9OXjB.Y0eUS7BMOFdktB/bS5kHRDYuBRJjqcm",
+  "role": "manager"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed67"
+  },
+  "email": "ciorcasandrei@gmail.com",
+  "password": "$2a$10$UZFeHNolBKh9fLHEzSqKF.qYo.fSpZU/DQWz3yQHC8KFvIvHN.m4O",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed68"
+  },
+  "email": "popvasile@yahoo.ro",
+  "password": "abc",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed69"
+  },
+  "email": "simon.mariana@gmail.com",
+  "password": "$2a$10$uWGDJwfqrz7y.sftw/zCOeRkxpi6ydodNadHMoQ1rnKo0tG84OKBK",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6a"
+  },
+  "email": "fane.cristian@gmail.com",
+  "password": "$2a$10$tcNfP.3CXs.lQbm8W9OT1erYpttEbfc2D9fnNoYIym4MQUDjzo5gu",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6b"
+  },
+  "email": "jason.derulo@gmail.com",
+  "password": "$2a$10$qKs389ypIsLVecxGwfcbUOHpql6FEH4oDUgwxSaqNCVxBYhosVzPq",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6c"
+  },
+  "email": "selenagomez@yahoo.com",
+  "password": "$2a$10$eV3PbuJW5IRX6YWMMb.Ao.W.1YZIT9YWSXBRyQvopKzvopeLnWQaa",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6d"
+  },
+  "email": "marian@gmail.com",
+  "password": "$2a$10$2a3CLmNEHUmHJzMChd.1SeXGAgXCAzzIy/ypuAEoAS8yW3II.hm.m",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6e"
+  },
+  "email": "john.deer@yahoo.com",
+  "password": "$2a$10$0yBUFVlITY4350e0mE6QL.5tFFOzdrE3FY8f87UyyETTuZG0Q7XMa",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed6f"
+  },
+  "email": "antonia.k@gmail.com",
+  "password": "$2a$10$3kxfNj2C65shmP6h8DyrsOmFmymwYyta50UQdRDyk68eUoehtUaU2",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed70"
+  },
+  "email": "jack.knife@gmail.com",
+  "password": "$2a$10$n.0vvJpFwiIZx08zgTgnE.3ufrbsRfErJ6GnNrFvJPw5ZcuDx9NVy",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed71"
+  },
+  "email": "karl.lag134@yahoo.com",
+  "password": "$2a$10$9EMFZMfHeFk1g5cWd6qdPO3X7wjIQhphQBLqany.RtI..gL0T2J26",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "6650a1a5fbe470cdb7f83122"
+  },
+  "email": "sergiu@123.com",
+  "password": "$2b$10$3JXqBj4BqhvBXOykE2qeKuU.QDrfd0jaxc5gjz4XW2WT10IbCmObi",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "6651a3be2247ce08886045e2"
+  },
+  "email": "maria@gmail.com",
+  "password": "$2b$10$BoRcGc3BIL3Sy0AgO146y.Kg5EY959Y0Tctv3NCSvS8li4K6Bd/LO",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "66534bd321067206e12470db"
+  },
+  "email": "george.alex04@yahoo.com",
+  "password": "$2b$10$1u1UmBzB1y5Wi9HWOAtAju/wISxhXxv3UuXOwU9OdGTC0iTImVJbi",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "6654523e1a1e00c0389b99a1"
+  },
+  "email": "sergiucata1405@gmail.com",
+  "password": "$2b$10$lYVk0U4Sqa7A3P3xPZgmG.edw9oNm3rSs13A5CPEr3Ta.LAVLBWgS",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "665457c920056fa3bb5896cb"
+  },
+  "email": "admin",
+  "password": "$2a$10$9LfYPGTOA6pA7ilH179oke6jh3NI3pGcVM.1TjjtR2OJBDn3gPZRq"
+},
+{
+  "_id": {
+    "$oid": "66545fe9de176453b6f6c428"
+  },
+  "email": "catalin@gmail.com",
+  "password": "$2b$10$zDX7Ob2yanKRo1pwH7Lg7uzC9Pz1g19HWCq/GLAOeolFj0ETAB9FK",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "6654663dd35ae0769a46daa3"
+  },
+  "email": "admin",
+  "password": "admin",
+  "role": "admin"
+},
+{
+  "_id": {
+    "$oid": "66546fc259407a401a1984be"
+  },
+  "email": "tzanca@contact.com",
+  "password": "$2b$10$29s35jxsP1gF15m1XF5HK.Zo/xpPlrQ6..zq8xl/KqVaDIDNUzOcm",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "665484823d6b55151cc59a63"
+  },
+  "email": "aaa",
+  "password": "$2b$10$IEB/q7B0Ua7DIuJQEdW67ORPy2xuWnDnj.URlbOEDx7feA01nkMau",
+  "role": "client"
+},
+{
+  "_id": {
+    "$oid": "665484ed3d6b55151cc59a65"
+  },
+  "email": "uuu",
+  "password": "$2b$10$eQo6zGrTmoA82IMZxTZ4ruFkMcRVlWW8dNbMGS629X74FPj1UUoUq",
+  "role": "client"
+}]

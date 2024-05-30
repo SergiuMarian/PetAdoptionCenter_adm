@@ -1,0 +1,170 @@
+[{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed78"
+  },
+  "first_name": "Ciorcas",
+  "last_name": "Andrei",
+  "phone_number": "+40765456287",
+  "email": "ciorcasandrei@gmail.com",
+  "address": "str. Porumbeilor nr. 11"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed79"
+  },
+  "first_name": "Pop",
+  "last_name": "Vasile",
+  "phone_number": "+40734672839",
+  "email": "popvasile@yahoo.ro",
+  "address": "str. Ceahlau nr. 5"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7a"
+  },
+  "first_name": "Simon",
+  "last_name": "Mariana",
+  "phone_number": "+40755236781",
+  "email": "simon.mariana@gmail.com",
+  "address": "str. Maramures nr. 71"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7b"
+  },
+  "first_name": "Fane",
+  "last_name": "Cristian",
+  "phone_number": "+40745733489",
+  "email": "fane.cristian@gmail.com",
+  "address": "str. Serpilor nr. 4"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7c"
+  },
+  "first_name": "Derulo",
+  "last_name": "Jason",
+  "phone_number": "+39263729102",
+  "email": "jason.derulo@gmail.com",
+  "address": "str. Armatei nr. 52"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7d"
+  },
+  "first_name": "Gomez",
+  "last_name": "Selena",
+  "phone_number": "+32193746281",
+  "email": "selenagomez@yahoo.com",
+  "address": "str. America nr. 48"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7e"
+  },
+  "first_name": "Sergiu",
+  "last_name": "Marian",
+  "phone_number": "+40744557425",
+  "email": "marian@gmail.com",
+  "address": "Str. Soarelui 3"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed7f"
+  },
+  "first_name": "John",
+  "last_name": "Deer",
+  "phone_number": "+40763497328",
+  "email": "john.deer@yahoo.com",
+  "address": "Str. Opel 12"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed80"
+  },
+  "first_name": "Antonia",
+  "last_name": "Kocsis",
+  "phone_number": "+40723331003",
+  "email": "antonia.k@gmail.com",
+  "address": "Str. Florilor 3"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed87"
+  },
+  "first_name": "Jack",
+  "last_name": "Knife",
+  "phone_number": "+40766558987",
+  "email": "jack.knife@gmail.com",
+  "address": "Str. Hol 2"
+},
+{
+  "_id": {
+    "$oid": "66450e2d23709f44f303ed88"
+  },
+  "first_name": "Karl",
+  "last_name": "Laggerfield",
+  "phone_number": "+40765349765",
+  "email": "karl.lag134@yahoo.com",
+  "address": "Str. Joi 90"
+},
+{
+  "_id": {
+    "$oid": "66534bd321067206e12470dc"
+  },
+  "first_name": "Goober",
+  "last_name": "Johnes",
+  "phone_number": "0745516190",
+  "email": "george.alex04@yahoo.com",
+  "address": "Alexandru Vlahuta nb28"
+},
+{
+  "_id": {
+    "$oid": "6654523e1a1e00c0389b99a2"
+  },
+  "first_name": "Sergiu",
+  "last_name": "Marian",
+  "phone_number": "0744557425",
+  "email": "sergiucata1405@gmail.com",
+  "address": "Alexandru Vlahuta Nr28"
+},
+{
+  "_id": {
+    "$oid": "6654584d20056fa3bb5896cd"
+  },
+  "first_name": "admin",
+  "last_name": "admin",
+  "phone_number": "",
+  "email": "admin",
+  "address": ""
+},
+{
+  "_id": {
+    "$oid": "66545fe9de176453b6f6c429"
+  },
+  "first_name": "Catalin",
+  "last_name": "Chira",
+  "phone_number": "0745516190",
+  "email": "catalin@gmail.com",
+  "address": "Alexandru Vlahuta nb28"
+},
+{
+  "_id": {
+    "$oid": "6654663ed35ae0769a46daa4"
+  },
+  "first_name": "Maria",
+  "last_name": "Oprean",
+  "phone_number": "07445566882",
+  "email": "maria14@gmail.com",
+  "address": "Vineri 13"
+},
+{
+  "_id": {
+    "$oid": "66546fc359407a401a1984bf"
+  },
+  "first_name": "Tzanca",
+  "last_name": "Uraganu",
+  "phone_number": "+40755669986",
+  "email": "tzanca@contact.com",
+  "address": "Primaverii 9"
+}]

@@ -3,15 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/saving-grace-logo1.png">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <title>Pet Adoption Center</title>
 </head>
 <body>
-    <h1>HI <%= name %></h1>
-    <form action="/logout?_method=DELETE" method="POST">
-        <button type="submit">Log Out</button>
-    </form>
-    <script src="./js/index.js"></script>
+    <div id="user_info">
+        <br>
+        <h3>Hello <%= name %></h3>
+        <button onclick='openAddModal()'>Add pet</button>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+    </div>
     
+    <div class="container">
+        <table>
+            <tr>
+                <% let count = 0; %>
+                <% pets.forEach(item => { %>
+                <td id="<%= item._id %>">
+                    <div id="img"><img src="./img/<%= item.name %>.jpg" alt="pet_pic"></div>
+                    <span id="name"><%= item.name %></span>
+                    <div id="actions">
+                        <span onclick='openEditModal(<%- JSON.stringify(item) %>)'>
+                            <i class="fas fa-edit"></i>
+                        </span>
+                        <span onclick="deletePet('<%= item._id %>')">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
+                    </div>
+                    <br><br>
+                    <div id="type">Breed: <%= item.breed %></div>
+                    <div id ="status">Slot: <%= item.slot %></div>
+                    <div id ="status">Adoption status: <%= item.status %></div>
+                    <div id="medical_profile">Medical condition: <%= item["medicalProfile"] %></div>                  
+                </td>
+                <% count++; %>
+                <% if (count === 5) { %>
+                  </tr><tr> <!-- Close current row and start a new row after every 5 animals -->
+                  <% count = 0; %>
+                <% } %>
+              <% }); %>
+            </tr>
+          </table>
+    </div>
+    <!-- modal form for editing a pet -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <form id="editForm">
+                <input type="hidden" id="editPetId">
+                <label for="editPetName">Name:</label>
+                <input type="text" id="editPetName" name="name">
+                <label for="editPetBreed">Breed:</label>
+                <input type="text" id="editPetBreed" name="breed">
+                <label for="editPetSlot">Slot:</label>
+                <input type="text" id="editPetSlot" name="slot">
+                <label for="editPetStatus">Status:</label>
+                <input type="text" id="editPetStatus" name="status">
+                <label for="editPetMedicalProfile">Medical status:</label>
+                <input type="text" id="editPetMedicalProfile" name="medicalProfile">
+                <button type="button" onclick="submitEditForm()">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- modal form for adding a pet -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddModal()">&times;</span>
+            <form id="editForm">
+                <label for="addPetName">Name:</label>
+                <input type="text" id="addPetName" name="name">
+                <label for="addPetBreed">Breed:</label>
+                <input type="text" id="addPetBreed" name="breed">
+                <label for="addPetSlot">Slot:</label>
+                <input type="text" id="addPetSlot" name="slot">
+                <label for="addPetStatus">Status:</label>
+                <input type="text" id="addPetStatus" name="status">
+                <label for="addPetMedicalProfile">Medical status:</label>
+                <input type="text" id="addPetMedicalProfile" name="medicalProfile">
+                <button type="button" onclick="submitAddForm()">Add pet</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/index.js" defer></script>
 </body>
 </html>
