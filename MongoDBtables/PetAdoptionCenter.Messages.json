@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "665b4d47fbcbcd15a5bdf52c"
+  },
+  "email": "rus.io.ioan@student.utcluj.ro",
+  "message": "Am fost sa vizitez unul dintre animale iar ingrijitorul de acolo s-a comportat foarte urat cu mine. Va rog sa luati masuri!",
+  "subject": "Reclamatie",
+  "reply": 0
+},
+{
+  "_id": {
+    "$oid": "665b4d47fbcbcd15a5bdf52e"
+  },
+  "email": "rusioanvasile14@gmail.com",
+  "message": "Panzerkampfwagen VIII Maus („Șoarece”) a fost un tanc german super-greu, din cel de-al Doilea Război Mondial, construit pe data de 1 august 1943 la Berlin. Primul test a fost realizat la fabrica Alkett din Berlin pe data de 24 decembrie 1943. Totuși turela nu era finalizată, așa că a fost înlocuită cu o sarcină egală cu greutatea sa.",
+  "subject": "Feedback vizita 15.05.2024",
+  "reply": 0
+},
+{
+  "_id": {
+    "$oid": "665b6e30fbcbcd15a5bdf530"
+  },
+  "email": "andreeajunior@gmail.com",
+  "message": "Pisica de casă, pisica domestică sau mâța (Felis catus[3] sau Felis silvestris catus[1]) este un mamifer din ordinul carnivorelor, familia Felidae, subfamilia Felinae. Este alături de oameni de peste 9500 ani[4] și în prezent este cel mai cunoscut animal domestic în toată lumea.[5] Pisica domestică este foarte",
+  "subject": "Mesaj pentru manager",
+  "reply": 0
+}]

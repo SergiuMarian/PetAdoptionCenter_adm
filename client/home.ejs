@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/saving-grace-logo1.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <title>Pet Adoption Center</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+
+            <li><a href="/pets">Pets</a></li>
+            <li><a href="/slots">Slots</a></li>
+            <li><a href="/home">Complaints</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li>
+                <form action="/logout?_method=DELETE" method="POST" style="display: inline;">
+                    <button type="submit">Log Out</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="clock">
+    <!-- Ceasul electronic -->
+</div>
+<div id="message">
+    <!-- Aici va apărea mesajul -->
+</div>
+<!-- Adăugarea containerului pentru mesaje -->
+<div id="email-container">
+    <!-- Aici vor fi afișate mesajele -->
+    <div class="email-list">
+        <!-- Lista de mesaje va fi afișată aici -->
+    </div>
+    <div class="email-details">
+        <!-- Detaliile mesajului selectat vor fi afișate aici -->
+    </div>
+</div>
+
+<script src="./js/home.js" defer></script>
+</body>
+</html>

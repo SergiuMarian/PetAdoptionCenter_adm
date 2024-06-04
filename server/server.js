@@ -44,6 +44,7 @@ app.use(methodOverride('_method'))
 // db connection
 let db
 let users
+let clients
 connectToDb((err) => {
     if(!err){
         app.listen(3000, ()=>{
@@ -130,11 +131,11 @@ app.post('/addPet', async (req, res) => {
 app.get('/',checkAuthenticated, async(req, res) =>{
     let clientName = await clients.findOne({email: req.user.email},'first_name last_name')
     if(clientName){
-         clientName = clientName.first_name + ' ' + clientName.last_name 
+        clientName = clientName.first_name + ' ' + clientName.last_name
     }
     const collection = db.collection('Pet')
     const pets = await collection.find({}).toArray();
-    res.render('index.ejs',{name: clientName, pets})
+    res.render('pets.ejs',{name: clientName, pets})
 })
     
 
@@ -143,11 +144,11 @@ app.get('/login', checkNotAuthenticated, (req, res)=>{
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/Pets',  // Redirecționează către pagina 'home' după autentificare
     failureRedirect: '/login',
     failureFlash: true
-    
 }))
+
 
 app.get('/signup', checkNotAuthenticated, (req, res)=>{
     res.render('signup.ejs')
@@ -190,7 +191,6 @@ function checkAuthenticated(req, res, next){
     if(req.isAuthenticated()){
         return next()
     }
-
     res.redirect('/login')
 
 }
@@ -227,7 +227,9 @@ async function createUser(req){
     const user = {
         email: req.body.email,
         password: hashedPassword,
-        role: "client"
+        role: "client",
+        name: req.body.firstname+" "+req.body.lastname,
+        phone: req.body.phone
     }
 
     const client = {
@@ -249,3 +251,68 @@ async function insertUser(client, user){
     console.log('Client added with _id: ${resultClient.isertedId}')
 
 }
+app.get('/home', checkAuthenticated, (req, res) => {
+    res.render('home.ejs'); // 'home' refers to 'home.ejs'
+});
+
+app.get('/pets', checkAuthenticated, async (req, res) => {
+    let clientName = await clients.findOne({ email: req.user.email }, 'first_name last_name');
+    if (clientName) {
+        clientName = clientName.first_name + ' ' + clientName.last_name;
+    }
+    const collection = db.collection('Pet');
+    const pets = await collection.find({}).toArray();
+    res.render('pets', { name: clientName, pets }); // 'pets' refers to 'pets.ejs'
+});
+
+app.get('/slots', checkAuthenticated, (req, res) => {
+    res.render('slots'); // 'slots' refers to 'slots.ejs'
+});
+
+app.get('/profile', checkAuthenticated, (req, res) => {
+    // You can fetch and pass user profile data here if needed
+    res.render('profile', { name: req.user.name, email: req.user.email, role: req.user.role, phone: req.user.phone }); // 'profile' refers to 'profile.ejs'
+});
+
+app.get('/emails', async (req, res) => {
+    try {
+        const emails = await db.collection('Messages').find({}).toArray();
+        res.json(emails);
+    } catch (error) {
+        console.error('Error fetching emails:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// Route pentru a trimite datele pentru slots către client
+app.get('/cages', checkAuthenticated, async (req, res) => {
+    try {
+        const cages = await db.collection('Slot').find({}).toArray();
+        res.json(cages);
+    } catch (error) {
+        console.error('Error fetching cages:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+app.put('/edit-cage/:id', async (req, res) => {
+    try {
+        console.log(req.params);
+        console.log(req.body);
+        const { id } = req.params;
+        const { number, type, clean_schedule, status, id_pet } = req.body;
+        const result = await db.collection('Slot').updateOne(
+            { _id: new ObjectId(id) },
+            { $set: { number, type, clean_schedule, status, id_pet } }
+        );
+
+        if (result.matchedCount === 1) {
+            res.status(200).json({ success: true });
+        } else {
+            res.status(404).json({ success: false, message: 'Cage not found' });
+        }
+    } catch (error) {
+        console.error('Error editing cage:', error);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+    }
+});

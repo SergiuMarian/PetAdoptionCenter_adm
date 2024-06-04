@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8a"
+  },
+  "id": 1,
+  "first name": "Nistor",
+  "last name": "Vlad",
+  "position": "manager",
+  "salary": 3500,
+  "working_hours": 8,
+  "email": "vlad.nistor@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8b"
+  },
+  "id": 2,
+  "first name": "Pop",
+  "last name": "Carina",
+  "position": "caretaker",
+  "salary": 2800,
+  "working_hours": 8,
+  "email": "carina.pop@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8c"
+  },
+  "id": 3,
+  "first name": "Ionescu",
+  "last name": "Teodor",
+  "position": "caretaker",
+  "salary": 3000,
+  "working_hours": 8,
+  "email": "teodor.ionescu@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8d"
+  },
+  "id": 4,
+  "first name": "Casper",
+  "last name": "John",
+  "position": "assistant manager",
+  "salary": 3200,
+  "working_hours": 8,
+  "email": "john.capser@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8e"
+  },
+  "id": 5,
+  "first name": "Luis",
+  "last name": "Karl",
+  "position": "caretaker",
+  "salary": 2800,
+  "working_hours": 8,
+  "email": "karl.luis@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed8f"
+  },
+  "id": 6,
+  "first name": "Petrescu",
+  "last name": "Ionela",
+  "position": "vet",
+  "salary": 4000,
+  "working_hours": 8,
+  "email": "ionela.petrescu@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed90"
+  },
+  "id": 7,
+  "first name": "Oprea",
+  "last name": "Mihaela",
+  "position": "vet",
+  "salary": 4000,
+  "working_hours": 8,
+  "email": "mihaela.oprea@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed91"
+  },
+  "id": 8,
+  "first name": "Ziman",
+  "last name": "Cornelia",
+  "position": "cleaner",
+  "salary": 2000,
+  "working_hours": 6,
+  "email": "cornelia.ziman@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed92"
+  },
+  "id": 9,
+  "first name": "Georgescu",
+  "last name": "Victor",
+  "position": "cleaner",
+  "salary": 2000,
+  "working_hours": 6,
+  "email": "victor.george@petac.com"
+},
+{
+  "_id": {
+    "$oid": "66450e6423709f44f303ed93"
+  },
+  "id": 10,
+  "first name": "Helesteanu",
+  "last name": "Gabriel",
+  "position": "caretaker",
+  "salary": 3000,
+  "working_hours": 8,
+  "email": "gabriel.hele@petac.com"
+}]

@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "66450dee23709f44f303ed66"
+  },
+  "email": "vlad.nistor@petac.com",
+  "password": "$2a$10$nRZSsSx2IkyB3OQc9OXjB.Y0eUS7BMOFdktB/bS5kHRDYuBRJjqcm",
+  "role": "manager",
+  "name": "Vlad Nistor",
+  "phone": "0758673902"
+},
+{
+  "_id": {
+    "$oid": "665457c920056fa3bb5896cb"
+  },
+  "email": "admin@gmail.com",
+  "password": "$2a$10$9LfYPGTOA6pA7ilH179oke6jh3NI3pGcVM.1TjjtR2OJBDn3gPZRq",
+  "role": "admin",
+  "name": "Admin admin",
+  "phone": "0754673902"
+},
+{
+  "_id": {
+    "$oid": "665f8a9c715a228ab0ad15eb"
+  },
+  "email": "mircea.stan@gmail.com",
+  "password": "$2b$10$4bmZQ9MbqhtWPQoZH/MUFewB4XoY7ccappEBSECE9zX5V4lM.W7uS",
+  "role": "caregiver",
+  "name": "Mircea Stan",
+  "phone": "0726973902"
+},
+{
+  "_id": {
+    "$oid": "665f8c3b142db9d02af091be"
+  },
+  "email": "andreipop@gmail.com",
+  "password": "$2b$10$Yq8jvv1Kis43xpQ3vefjNOHJDQcEUBwwAILUsmX2SHDf6tWpavpou",
+  "role": "accountant",
+  "name": "Andrei Pop",
+  "phone": "0789345009"
+}]

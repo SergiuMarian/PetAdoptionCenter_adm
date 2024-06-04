@@ -1,0 +1,129 @@
+#room {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 coloane pentru custi */
+    gap: 15px;
+    padding: 30px;
+    max-width: 1200px; /* Lățimea maximă a încăperii */
+    margin: 50px auto; /* Centrarea încăperii pe pagină */
+    border: 10px solid #333; /* Margini pentru a imita pereții încăperii */
+    border-radius: 20px;
+    background-color: #f5f5f5; /* Culoarea de fundal a încăperii */
+    position: relative; /* Pentru a putea poziționa alte elemente în raport cu încăperea */
+    height: 600px; /* Înălțimea încăperii */
+}
+
+.cage {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    font-size: 0.9em; /* Dimensiune mai mică a textului */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cage-number {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Dimensiune mai mare pentru numărul cuștii */
+    text-align: center;
+}
+
+.cage p {
+    margin: 5px 0;
+    font-size: 0.9em; /* Dimensiune mai mică a textului */
+    text-align: center;
+}
+
+.cage.available {
+    border-color: green;
+    background-color: #e0ffe0;
+}
+
+.cage.occupied {
+    border-color: red;
+    background-color: #ffe0e0;
+}
+
+.cage:hover {
+    transform: scale(1.05);
+}
+
+/* Stil pentru ușă */
+.door {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: #888;
+    border-radius: 5px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+/* Fontul si boxul pentru butoane */
+.button {
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-family: Arial, sans-serif; /* Set font family */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #808080; /* Grey background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Add bold font weight */
+    margin-top: 10px; /* Adjust top margin */
+}
+
+/* Stil pentru butoane cand sunt hover */
+.button:hover {
+    background-color: #45a049; /* Darker green background color on hover */
+}
+
+
+
+.save-button:hover {
+    background-color: #6c757d; /* Dark grey background color on hover */
+}
+
+/* Style pentru butonul "Close" */
+.close-button {
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-family: Arial, sans-serif; /* Set font family */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #808080; /* Grey background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Add bold font weight */
+    margin-top: 10px; /* Adjust top margin */
+}
+
+.close-button:hover,
+.close-button:focus {
+    background-color: #45a049; /* Darker green background color on hover/focus */
+    text-decoration: none; /* Remove underline on hover/focus */
+}
+/* Stil pentru mesajele de eroare */
+/* Stil pentru mesajele de eroare */
+.error-message {
+    display: none; /* Inițial ascuns */
+    color: red; /* Culoare roșie pentru mesaj */
+    font-size: 0.8em; /* Dimensiunea fontului */
+    margin-top: 5px; /* Spațiu de sus */
+}
+
+/* Stil pentru câmpurile de input cu eroare */
+.error {
+    border-color: red !important; /* Bordură roșie */
+}

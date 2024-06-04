@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "66450e1a23709f44f303ed74"
+  },
+  "id": 1,
+  "id_pet": 2,
+  "id_client": 1,
+  "id_appointment": 1
+},
+{
+  "_id": {
+    "$oid": "66450e1a23709f44f303ed75"
+  },
+  "id": 2,
+  "id_pet": 6,
+  "id_client": 3,
+  "id_appointment": 3
+},
+{
+  "_id": {
+    "$oid": "66450e1a23709f44f303ed76"
+  },
+  "id": 3,
+  "id_pet": 10,
+  "id_client": 5,
+  "id_appointment": 6
+}]

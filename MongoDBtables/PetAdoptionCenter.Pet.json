@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed95"
+  },
+  "name": "Max",
+  "status": "waiting",
+  "breed": "dachshund",
+  "slot": 345,
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed96"
+  },
+  "name": "Dexter",
+  "status": "adopted",
+  "breed": "crested gecko",
+  "slot": 536,
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed97"
+  },
+  "name": "Milo",
+  "status": "rehabilitation",
+  "breed": "bengal cat",
+  "slot": 568,
+  "medicalProfile": "broken leg"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed98"
+  },
+  "name": "Blue",
+  "status": "reserved",
+  "breed": "macaw parrot",
+  "slot": 231,
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed99"
+  },
+  "name": "Slowy",
+  "status": "waiting",
+  "breed": "turtle",
+  "slot": "23",
+  "medicalProfile": "injured"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed9a"
+  },
+  "name": "Cornel",
+  "status": "adopted",
+  "slot": "898",
+  "breed": "bulldog",
+  "medicalProfile": "broken leg"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed9b"
+  },
+  "name": "Dante",
+  "status": "reserved",
+  "breed": "beagle",
+  "slot": "607",
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed9c"
+  },
+  "name": "Maya",
+  "status": "rehabilitation",
+  "breed": "poodle",
+  "slot": 500,
+  "medicalProfile": "skin condition"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed9d"
+  },
+  "name": "Butter",
+  "status": "waiting",
+  "breed": "corgi",
+  "slot": 311,
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "66450e7623709f44f303ed9e"
+  },
+  "name": "Marla",
+  "status": "adopted",
+  "breed": "pug",
+  "slot": 499,
+  "medicalProfile": "healthy"
+},
+{
+  "_id": {
+    "$oid": "665871f04d1c0b267e8f5f12"
+  },
+  "name": "Max",
+  "breed": "test",
+  "slot": "434",
+  "status": "waiting",
+  "medicalProfile": "healthy"
+}]

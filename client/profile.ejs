@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/saving-grace-logo1.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <title>Pet Adoption Center</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+
+            <li><a href="/pets">Pets</a></li>
+            <li><a href="/slots">Slots</a></li>
+            <li><a href="/home">Complaints</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li>
+                <form action="/logout?_method=DELETE" method="POST" style="display: inline;">
+                    <button type="submit">Log Out</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+<h1>Profile Page</h1>
+<div>
+    <!-- Include user profile details here -->
+    <p>Name: <%= name %></p>
+    <p>Email: <%= email %> </p>
+    <p>Role: <%= role %> </p>
+    <p>Phone: <%= phone %> </p>
+</div>
+</body>
+</html>
