@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    padding-top: 60px; /* Asigură-te că conținutul nu este acoperit de header */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a, header nav ul li form button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 60px auto 0; /* Adaugă un margin-top pentru a evita suprapunerea */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border-left: 5px solid #4CAF50; /* Adaugă o margine colorată în stânga */
+}
+
+.profile-container p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.profile-container p span {
+    font-weight: bold;
+    color: #333;
+    background-color: #e7f3fe;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 15px;
+    }
+}

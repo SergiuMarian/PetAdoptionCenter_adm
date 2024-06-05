@@ -1,5 +1,6 @@
 const slotsContainer = document.getElementById('room');
 let selectedCageId = null;
+let cages=[];
 // Fetch data from server
 fetch('/cages')
     .then(response => {
@@ -9,11 +10,13 @@ fetch('/cages')
         return response.json();
     })
     .then(data => {
+        cages=data;
         data.forEach(cage => {
             const cageElement = document.createElement('div');
+
             cageElement.className = 'cage';
             cageElement.dataset._id = cage._id;
-            cageElement.classList.add(cage.id_pet === 0 ? 'available' : 'occupied');
+            cageElement.classList.add(cage.status === "free" ? 'available' : 'occupied');
             cageElement.innerHTML = `
         <h3 class="cage-number">Cage #${cage.number}</h3>
         <p>Type: ${cage.type}</p>
@@ -153,7 +156,7 @@ function validateType(type) {
 }
 
 function validateCleanSchedule(cleanSchedule) {
-    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday","none"];
     return daysOfWeek.includes(cleanSchedule.trim());
 }
 
@@ -165,9 +168,19 @@ function validateStatus(status) {
 
 
 function validateIdPet(idPet) {
+    if (isNaN(idPet) || idPet < 0) {
+        return false; // ID-ul trebuie să fie un număr valid și pozitiv
+    }
+    if(idPet==0)return  true;
+    // Verificăm dacă ID-ul este deja asignat unei alte cuști
+    for (const cage of cages) {
+        if (cage.id_pet == idPet ) {
+            return false; // ID-ul este deja utilizat în altă cușcă
+        }
+    }
+
     return true;
 }
-
 // Funcții pentru afișarea și ascunderea mesajelor de eroare
 function showError(fieldId, message) {
     const field = document.getElementById(fieldId);

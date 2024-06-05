@@ -6,6 +6,7 @@
     <link rel="icon" href="img/saving-grace-logo1.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <title>Pet Adoption Center</title>
 </head>
@@ -13,7 +14,6 @@
 <header>
     <nav>
         <ul>
-
             <li><a href="/pets">Pets</a></li>
             <li><a href="/slots">Slots</a></li>
             <li><a href="/home">Complaints</a></li>
@@ -26,13 +26,13 @@
         </ul>
     </nav>
 </header>
-<h1>Profile Page</h1>
-<div>
+
+<div class="profile-container">
     <!-- Include user profile details here -->
-    <p>Name: <%= name %></p>
-    <p>Email: <%= email %> </p>
-    <p>Role: <%= role %> </p>
-    <p>Phone: <%= phone %> </p>
+    <p><span>Name:</span> <%= name %></p>
+    <p><span>Email:</span> <%= email %> </p>
+    <p><span>Role:</span> <%= role%> </p>
+    <p><span>Phone:</span> <%= phone %> </p>
 </div>
 </body>
 </html>
